@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+
+  traefik:
+    image: traefik:v2.10
+
+  mysql:
+    image: mysql:8.2
+
+  php:
+    build:
+      context: .
+      target: base
+    depends_on:
+      - traefik
+      - mysql
