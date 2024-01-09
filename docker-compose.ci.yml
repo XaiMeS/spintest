@@ -19,7 +19,7 @@ services:
     environment:
       AUTORUN_ENABLED: false
     depends_on:
-      - mariadb
+      - mysql
 
   node:
     image: node:20
