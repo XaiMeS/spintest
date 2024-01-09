@@ -67,7 +67,7 @@ jobs:
           tags: "${{ inputs.docker-tags }}"
           dockerfile: "${{ inputs.dockerfile }}"
           registry: "ghcr.io"
-          registry-username: "xaimes"
+          registry-username: "${{ github.actor }}"
           registry-token: "${{ secrets.GITHUB_TOKEN }}"
           platforms: "${{ inputs.platforms }}"
           target: "${{ inputs.target }}"
